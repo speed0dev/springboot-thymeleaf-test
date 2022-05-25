@@ -28,19 +28,19 @@ class AppApplicationTests {
 		log.debug("mockTest() begin -------------------------");
 		log.debug(" mvc:" + mvc);
 
-		try {
-
-			mvc.perform(get("/v/books"))
-					.andExpect(status().isOk())
-					//.andExpect(view().name("book"))
-					.andExpect(model().attributeExists("bookList"))
-					//.andExpect(model().attribute("bookList", contains(book)))
-			;
-
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		log.debug("mockTest() end ===========================");
+//		try {
+//
+//			mvc.perform(get("/v/books"))
+//					.andExpect(status().isOk())
+//					//.andExpect(view().name("book"))
+//					.andExpect(model().attributeExists("bookList"))
+//					//.andExpect(model().attribute("bookList", contains(book)))
+//			;
+//
+//		}catch(Exception e){
+//			e.printStackTrace();
+//		}
+//		log.debug("mockTest() end ===========================");
 
 
 	}

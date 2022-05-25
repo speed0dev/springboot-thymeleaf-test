@@ -33,6 +33,12 @@ spring.devtools.livereload.enabled: true #정적리소스 변화시 바로 반�
 
 server:
   port: 9090
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enable: true
+      force: true
 
 
 #logging
