@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div>bookList</div>
+    <div>Check</div>
+    <div>
+        <span th:text="${book.value}" ></span>
+        <span th:text=${book.name} ></span>
+        <div>[bookList] </div>
+        <div>
+                <div>이름 / title / 가격</div>
+            <div th:each="item, status:${bookList}">
+                <div>
+                    <span th:text="${item.name}"></span>
+                    <span th:text="${item.title}"></span>
+                    <span th:text="${item.value}"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+spring:
+  application.name: app
+  mvc.static-path-pattern: /static/**   # static
+
+
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    check-template-location: true   # error 페이지처리
+    prefix: classpath:/templates/thymeleaf/ # html경로
+    suffix: .html
+    cache: false    # cache 사용여부  운영시 true
+
+  #templates 디렉토리에 파일이 있는지 없는지 체크, 없으면 에러를 발생시킨다.
+  thymeleaf.check-template-location: true
+
+  resources:
+    static-locations:
+      - classpath:/static/
+    cache:
+      period: 0
+
+
+
+spring.devtools.livereload.enabled: true #정적리소스 변화시 바로 반영 #
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+#      base-path: "/"
+
+server:
+  port: 9090
+
+
+#logging
+logging:
+  level:
+    root: INFO
+    com.ex.jk: debug
+
+
+
+
+
+#debug: true
